@@ -1,3 +1,13 @@
+testing:
+    resource: "@TestingBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+college:
+    resource: "@CollegeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation

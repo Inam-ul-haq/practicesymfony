@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use AppBundle\Entity\Post; 
 use Symfony\Component\HttpFoundation\Response;
 class PostController extends Controller
-{
+{             
 /**
      * @Route("/index", name="postpage")
      */
@@ -44,7 +44,7 @@ class PostController extends Controller
 			public function updateAction($id){
 
 					$doct =$this->getDoctrine()->getManager();
-					$post =$doct->getRepository('AppBundle:Post')->find($id);
+									$post =$doct->getRepository('AppBundle:Post')->find($id);
 						if(!$post){
 						throw $this->createNotFoundException(
 							'no post found for id'. $id);}
@@ -64,8 +64,7 @@ class PostController extends Controller
 						if(!$post){
 							throw $this->createNotFoundException('no post found form this id' .$id);
 						}
-   
-						$doct->remove($post);
+                        $doct->remove($post);
 						$doct->flush();
 						return new Response('Record deleted');
 			}
