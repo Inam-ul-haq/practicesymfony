@@ -28,7 +28,8 @@ class PostController extends Controller
 		    }
 				/**
 			     * @Route("/create", name="createpage")
-			     */
+
+                 */
 
 			public function createAction(Request $request){
 				$post = new Post();
